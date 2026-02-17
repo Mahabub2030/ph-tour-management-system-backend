@@ -16,7 +16,7 @@ app.use(
     secret: envVars.EXPRESS_SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-  })
+  }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -32,7 +32,7 @@ app.use(
       "http://localhost:5173",
     ],
     credentials: true,
-  })
+  }),
 );
 
 app.use("/api/v1", router);
